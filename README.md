@@ -17,38 +17,32 @@ Uma API REST moderna construída com **Node.js**, **Fastify** e **TypeScript** p
 O diagrama abaixo ilustra o fluxo principal da API, mostrando como as requisições são processadas desde o cliente até o banco de dados:
 
 ```mermaid
-graph TD
-    A[Cliente/Frontend] -->|POST /courses| B[Criar Curso]
-    A -->|GET /courses| C[Listar Cursos]
-    A -->|GET /courses/:id| D[Buscar Curso por ID]
+flowchart TD
+    A[Cliente] --> B[POST /courses]
+    A --> C[GET /courses]
+    A --> D[GET /courses/:id]
     
-    B --> E{Validação Zod}
-    E -->|❌ Inválido| F[Erro 400 - Bad Request]
-    E -->|✅ Válido| G[Drizzle ORM]
+    B --> E{Validacao Zod}
+    E -->|Invalido| F[Erro 400]
+    E -->|Valido| G[Drizzle ORM]
     
-    C --> H[Drizzle ORM - SELECT]
-    D --> I[Drizzle ORM - SELECT WHERE]
+    C --> H[Drizzle ORM SELECT]
+    D --> I[Drizzle ORM SELECT WHERE]
     
-    G --> J[(PostgreSQL Database)]
+    G --> J[(PostgreSQL)]
     H --> J
     I --> J
     
-    J -->|Curso criado| K[Retorna courseId - 201]
-    J -->|Lista de cursos| L[Retorna courses[] - 200]
-    J -->|Curso encontrado| M[Retorna course - 200]
-    J -->|Curso não encontrado| N[Erro 404 - Not Found]
+    J --> K[Retorna courseId 201]
+    J --> L[Retorna courses 200]
+    J --> M[Retorna course 200]
+    J --> N[Erro 404]
     
     K --> A
     L --> A
     M --> A
     N --> A
     F --> A
-    
-    style A fill:#e1f5fe
-    style J fill:#f3e5f5
-    style E fill:#fff3e0
-    style F fill:#ffebee
-    style N fill:#ffebee
 ```
 
 ### Descrição do Fluxo:
