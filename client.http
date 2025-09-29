@@ -2,7 +2,7 @@
 GET http://localhost:3333/courses
 
 ###
-GET http://localhost:3333/courses/1
+GET http://localhost:3333/courses/1c4a3595-ec87-455d-9cf7-656982d8a6ae
 
 
 ###
@@ -10,5 +10,5 @@ POST http://localhost:3333/courses
 Content-Type: application/json
 
 {
-  "title": "Node.js"
+  "title": "Curso de TypeScript"
 }
