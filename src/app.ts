@@ -7,9 +7,9 @@ import {
   jsonSchemaTransform,
   type ZodTypeProvider 
 } from 'fastify-type-provider-zod'
-import { createCourseRoute } from './src/routes/create-course.ts'
-import { getCoursesRoute } from './src/routes/get-courses.ts'
-import { getCourseByIdRoute } from './src/routes/get-course-by-id.ts'
+import { createCourseRoute } from './routes/create-course.ts'
+import { getCoursesRoute } from './routes/get-courses.ts'
+import { getCourseByIdRoute } from './routes/get-course-by-id.ts'
 
 const server = fastify({
   logger: {
@@ -51,6 +51,4 @@ server.register(createCourseRoute)
 server.register(getCoursesRoute)
 server.register(getCourseByIdRoute)
 
-server.listen({ port: 3333 }).then(() => {
-  console.log('HTTP server running!')
-})
+export { server}

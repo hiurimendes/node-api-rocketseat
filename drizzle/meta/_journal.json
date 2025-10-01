@@ -15,6 +15,34 @@
       "when": 1758908321360,
       "tag": "0001_flowery_ego",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1759156054801,
+      "tag": "0002_clumsy_giant_girl",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1759156162723,
+      "tag": "0003_public_human_fly",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1759167112359,
+      "tag": "0004_wet_darwin",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1759167514784,
+      "tag": "0005_ambiguous_mandarin",
+      "breakpoints": true
     }
   ]
 }
