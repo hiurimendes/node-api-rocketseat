@@ -2,13 +2,25 @@
 GET http://localhost:3333/courses
 
 ###
-GET http://localhost:3333/courses/1c4a3595-ec87-455d-9cf7-656982d8a6ae
+GET http://localhost:3333/courses/fc6cec72-325a-43f9-a4a1-b5831816637f
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTU2MjMxOS1iNjg2LTQ2ZTUtOTEwMS1mZmM3YTM3OTFmYjQiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1OTQxNTMwMH0.4rGuc9KJdms4SohSQIqY8dQP_JrvDVXwvUecfib6RvY
 
 
 ###
 POST http://localhost:3333/courses
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTU2MjMxOS1iNjg2LTQ2ZTUtOTEwMS1mZmM3YTM3OTFmYjQiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1OTQxNjEzNn0.Q3ZpAexFQ_yUYJ2To0JksJexOqlCLsee8RfvBCnvVOg
 
 {
-  "title": "Curso de TypeScript"
+  "title": "Curso de TypeScript 3"
+}
+
+###
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "Helio55@hotmail.com",
+  "password": "123456"
 }
